@@ -1,0 +1,6 @@
+{
+  "name": "venemex-web",
+  "scripts": {
+    "start": "npx serve . -l $PORT"
+  }
+}
