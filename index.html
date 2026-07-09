@@ -226,7 +226,8 @@
     .cat-thumb.active .cat-thumb-label { color: var(--gold); }
 
     /* ── MENU: SECTION HEADER ────────────────────── */
-    .menu-section { margin-bottom: 5rem; scroll-margin-top: 100px; }
+    .menu-section { margin-bottom: 5rem; scroll-margin-top: 100px; display: none; }
+    .menu-section.active-cat { display: block; }
     .menu-section-head {
       display: flex; align-items: center; gap: 1.5rem;
       padding-bottom: 1.4rem; margin-bottom: 2.2rem;
@@ -759,7 +760,7 @@
     </div>
 
     <!-- ── Arepas & Patacón ── -->
-    <div class="menu-section" id="sec-arepas">
+    <div class="menu-section active-cat" id="sec-arepas">
       <div class="menu-section-head">
         <div class="menu-section-icon">🫓</div>
         <div>
@@ -1332,239 +1333,6 @@
               <div class="nutr-macro"><span class="nutr-macro-val">24g</span><span class="nutr-macro-lbl">Fat</span></div>
               <div class="nutr-macro"><span class="nutr-macro-val">72g</span><span class="nutr-macro-lbl">Carbs</span></div>
               <div class="nutr-macro"><span class="nutr-macro-val">36g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tacos &amp; Burritos -->
-    <div class="menu-section" id="sec-tacos">
-      <div class="menu-section-head">
-        <div class="menu-section-icon">🌮</div>
-        <div>
-          <div class="menu-section-title" data-en="Tacos &amp; Burritos" data-es="Tacos &amp; Burritos">Tacos &amp; Burritos</div>
-          <div class="menu-section-tagline" data-en="Mexican tradition with a Venezuelan twist" data-es="Tradición mexicana con un toque venezolano">Mexican tradition with a Venezuelan twist</div>
-        </div>
-      </div>
-
-        <div class="menu-card rv" data-d="1">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa de Queso</div>
-            <div class="menu-card-desc" data-en="Classic arepa with white cheese." data-es="Arepa rellena de queso blanco.">Classic arepa with white cheese.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$9.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">320</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">12g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">14g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="2">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Huevo con Jamón</div>
-            <div class="menu-card-desc" data-en="Arepa with egg and ham." data-es="Arepa con huevo y jamón.">Arepa with egg and ham.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$10.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">410</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">16g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">22g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk, Egg</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="3">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Pollo Mechado</div>
-            <div class="menu-card-desc" data-en="Arepa filled with shredded chicken." data-es="Arepa con pollo mechado.">Arepa filled with shredded chicken.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$13.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">450</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">14g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">35g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> None</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="4">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Carne Mechada</div>
-            <div class="menu-card-desc" data-en="Arepa filled with shredded beef." data-es="Arepa con carne mechada.">Arepa filled with shredded beef.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$14.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">490</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">18g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> None</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="5">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa La Catira</div>
-            <div class="menu-card-desc" data-en="Shredded chicken with yellow cheese." data-es="Pollo mechado y queso amarillo.">Shredded chicken with yellow cheese.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$12.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">480</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">18g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">36g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="6">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa La Pelúa</div>
-            <div class="menu-card-desc" data-en="Shredded beef with white cheese." data-es="Carne mechada y queso blanco.">Shredded beef with white cheese.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$12.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">510</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">20g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">38g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="1">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Domino</div>
-            <div class="menu-card-desc" data-en="Black beans and white cheese — a Venezuelan classic." data-es="Frijol negro y queso blanco — un clásico venezolano.">Black beans and white cheese — a Venezuelan classic.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$10.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">380</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">10g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">52g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">18g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="2">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Pabellón</div>
-            <div class="menu-card-desc" data-en="Shredded beef, black beans, sweet plantain and white cheese." data-es="Carne mechada, frijol negro, plátano y queso blanco.">Shredded beef, black beans, sweet plantain and white cheese.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$13.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">530</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">16g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">62g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">30g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="3">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Reina Pepiada</div>
-            <div class="menu-card-desc" data-en="Avocado and shredded chicken." data-es="Aguacate y pollo mechado.">Avocado and shredded chicken.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$13.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">440</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">18g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">42g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">30g</span><span class="nutr-macro-lbl">Protein</span></div>
-            </div>
-            <div class="nutr-allergens"><strong>Allergens:</strong> None</div>
-            <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
-          </div>
-        </div>
-        <div class="menu-card rv" data-d="4">
-          <div class="menu-card-photo">🫓</div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Arepa Llanera</div>
-            <div class="menu-card-desc" data-en="Grilled beef, grilled chicken, hand cheese and guasacaca." data-es="Carne asada, pollo asado, queso de mano y guasacaca.">Grilled beef, grilled chicken, hand cheese and guasacaca.</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">$16.99</span>
-              <a href="#order" class="btn-order-sm" data-en="Order" data-es="Ordenar">Order</a>
-            </div>
-          </div>
-          <button class="nutr-toggle" onclick="this.closest('.menu-card').classList.toggle('nutr-open')"><span data-en="Nutrition Info" data-es="Información Nutricional">Nutrition Info</span> <span class="nutr-arrow">▾</span></button>
-          <div class="nutr-panel">
-            <div class="nutr-macros">
-              <div class="nutr-macro"><span class="nutr-macro-val">620</span><span class="nutr-macro-lbl">Calories</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">24g</span><span class="nutr-macro-lbl">Fat</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">42g</span><span class="nutr-macro-lbl">Carbs</span></div>
-              <div class="nutr-macro"><span class="nutr-macro-val">52g</span><span class="nutr-macro-lbl">Protein</span></div>
             </div>
             <div class="nutr-allergens"><strong>Allergens:</strong> Milk</div>
             <div class="nutr-disclaimer">*Estimates only. Values may vary based on preparation and portion size.</div>
@@ -3352,21 +3120,24 @@ function counter(el){
 const cio=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){counter(x.target);cio.unobserve(x.target);}});},{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 
-/* CATEGORY JUMP highlight */
-const sections=['sec-arepas','sec-patacones','sec-tacos','sec-burritos','sec-platos','sec-acomp','sec-empanadas','sec-quesadillas','sec-sandwiches','sec-combos','sec-des','sec-cafe','sec-bebidas','sec-postres'];
+/* CATEGORY TABS: show only the selected menu section at a time */
+const menuSections=document.querySelectorAll('.menu-section');
 const thumbs=document.querySelectorAll('.cat-thumb');
-const sio=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      const id=e.target.id;
-      thumbs.forEach(t=>{t.classList.toggle('active',t.getAttribute('href')==='#'+id);});
-    }
+function showMenuCategory(id){
+  menuSections.forEach(s=>s.classList.toggle('active-cat',s.id===id));
+  thumbs.forEach(t=>t.classList.toggle('active',t.getAttribute('href')==='#'+id));
+  const target=document.getElementById(id);
+  if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.querySelectorAll('a[href^="#sec-"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    showMenuCategory(a.getAttribute('href').slice(1));
   });
-},{threshold:.4});
-sections.forEach(id=>{const el=document.getElementById(id);if(el)sio.observe(el);});
+});
 
-/* SMOOTH SCROLL */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
+/* SMOOTH SCROLL (all other anchors) */
+document.querySelectorAll('a[href^="#"]:not([href^="#sec-"])').forEach(a=>{
   a.addEventListener('click',e=>{
     const t=document.querySelector(a.getAttribute('href'));
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
