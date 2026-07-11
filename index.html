@@ -35,16 +35,6 @@
     ::-webkit-scrollbar-track { background: var(--parchment); }
     ::-webkit-scrollbar-thumb { background: var(--brown-mid); border-radius: 3px; }
 
-    /* ── PROTOTYPE BADGE ─────────────────────────── */
-    .proto-badge {
-      position: fixed; top: 0; left: 50%; transform: translateX(-50%);
-      z-index: 9999; background: var(--espresso);
-      color: var(--gold-light); font-size: .58rem; font-weight: 700;
-      letter-spacing: 3px; text-transform: uppercase;
-      padding: .28rem 1.4rem; border-radius: 0 0 6px 6px;
-      font-family: 'Lato', sans-serif;
-    }
-
     /* ── TOP BAR ─────────────────────────────────── */
     .top-bar {
       background: var(--espresso); color: rgba(253,248,241,.6);
@@ -269,6 +259,7 @@
       color: var(--text-muted); opacity: .5;
       font-family: 'Lato', sans-serif;
     }
+    .menu-card-photo:has(img)::after { display: none; }
     .menu-card-body { padding: 1.3rem 1.4rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
     .menu-card-name {
       font-family: 'Libre Baskerville', serif;
@@ -570,13 +561,11 @@
 </head>
 <body>
 
-<div class="proto-badge">PROTOTIPO — Estilo First Watch</div>
-
 <!-- ═══ TOP BAR ════════════════════════════════════ -->
 <div class="top-bar">
   <strong data-en="Now Open" data-es="Abierto">Now Open</strong>
   <span>·</span>
-  <span data-en="201 Seabreeze Blvd, Daytona Beach · Tue–Sun 7AM–7PM" data-es="201 Seabreeze Blvd, Daytona Beach · Mar–Dom 7AM–7PM">201 Seabreeze Blvd, Daytona Beach · Tue–Sun 7AM–7PM</span>
+  <span data-en="201 Seabreeze Blvd, Daytona Beach · Tue–Sun, Closed Mondays" data-es="201 Seabreeze Blvd, Daytona Beach · Mar–Dom, Cerrado los lunes">201 Seabreeze Blvd, Daytona Beach · Tue–Sun, Closed Mondays</span>
   <span>·</span>
   <a href="tel:3862650055" style="color:var(--gold-light);font-weight:700;text-decoration:none;letter-spacing:1px">📞 (386) 265-0055</a>
 </div>
@@ -719,11 +708,11 @@
       </a>
       <a class="cat-thumb" href="#sec-platos">
         <div class="cat-thumb-img">🍽️</div>
-        <span class="cat-thumb-label" data-en="Platos<br>Típicos" data-es="Platos<br>Típicos">Platos<br>Típicos</span>
+        <span class="cat-thumb-label" data-en="Local<br>Dishes" data-es="Platos<br>Típicos">Platos<br>Típicos</span>
       </a>
       <a class="cat-thumb" href="#sec-acomp">
         <div class="cat-thumb-img">🍌</div>
-        <span class="cat-thumb-label" data-en="Acompañantes" data-es="Acompañantes">Acompañantes</span>
+        <span class="cat-thumb-label" data-en="Sides" data-es="Acompañantes">Acompañantes</span>
       </a>
       <a class="cat-thumb" href="#sec-empanadas">
         <div class="cat-thumb-img">🥟</div>
@@ -747,7 +736,7 @@
       </a>
       <a class="cat-thumb" href="#sec-cafe">
         <div class="cat-thumb-img">☕</div>
-        <span class="cat-thumb-label" data-en="Café" data-es="Café">Café</span>
+        <span class="cat-thumb-label" data-en="Coffee" data-es="Café">Café</span>
       </a>
       <a class="cat-thumb" href="#sec-bebidas">
         <div class="cat-thumb-img">🥤</div>
@@ -1576,7 +1565,7 @@
       <div class="menu-section-head">
         <div class="menu-section-icon">🍽️</div>
         <div>
-          <div class="menu-section-title" data-en="Platos Típicos" data-es="Platos Típicos">Platos Típicos</div>
+          <div class="menu-section-title" data-en="Local Dishes" data-es="Platos Típicos">Platos Típicos</div>
           <div class="menu-section-tagline" data-en="Hearty main plates made from scratch" data-es="Platos principales hechos desde cero">Hearty main plates made from scratch</div>
         </div>
       </div>
@@ -1655,7 +1644,7 @@
       <div class="menu-section-head">
         <div class="menu-section-icon">🍌</div>
         <div>
-          <div class="menu-section-title" data-en="Acompañantes" data-es="Acompañantes">Acompañantes</div>
+          <div class="menu-section-title" data-en="Sides" data-es="Acompañantes">Acompañantes</div>
           <div class="menu-section-tagline" data-en="Perfect sides for any plate" data-es="Perfectos para acompañar cualquier plato">Perfect sides for any plate</div>
         </div>
       </div>
@@ -3002,12 +2991,12 @@
         <h3><span class="ico">🕐</span> <span data-en="Hours" data-es="Horario">Hours</span></h3>
         <table class="hours-table">
           <tr class="closed"><td data-en="Monday" data-es="Lunes">Monday</td><td data-en="Closed" data-es="Cerrado">Closed</td></tr>
-          <tr><td data-en="Tuesday" data-es="Martes">Tuesday</td><td>7:00 AM – 7:00 PM</td></tr>
-          <tr><td data-en="Wednesday" data-es="Miércoles">Wednesday</td><td>7:00 AM – 7:00 PM</td></tr>
-          <tr><td data-en="Thursday" data-es="Jueves">Thursday</td><td>7:00 AM – 7:00 PM</td></tr>
-          <tr><td data-en="Friday" data-es="Viernes">Friday</td><td>7:00 AM – 7:00 PM</td></tr>
-          <tr><td data-en="Saturday" data-es="Sábado">Saturday</td><td>7:00 AM – 7:00 PM</td></tr>
-          <tr><td data-en="Sunday" data-es="Domingo">Sunday</td><td>7:00 AM – 7:00 PM</td></tr>
+          <tr><td data-en="Tuesday" data-es="Martes">Tuesday</td><td>8:00 AM – 7:00 PM</td></tr>
+          <tr><td data-en="Wednesday" data-es="Miércoles">Wednesday</td><td>8:00 AM – 7:00 PM</td></tr>
+          <tr><td data-en="Thursday" data-es="Jueves">Thursday</td><td>8:00 AM – 7:00 PM</td></tr>
+          <tr><td data-en="Friday" data-es="Viernes">Friday</td><td>8:00 AM – 8:00 PM</td></tr>
+          <tr><td data-en="Saturday" data-es="Sábado">Saturday</td><td>10:00 AM – 8:00 PM</td></tr>
+          <tr><td data-en="Sunday" data-es="Domingo">Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
         </table>
       </div>
       <div class="rvr">
