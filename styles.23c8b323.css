@@ -422,6 +422,16 @@
       line-height: 1.4;
     }
 
+    /* ── FAQ ─────────────────────────────────────── */
+    .faq-list { margin-top: .5rem; }
+    .faq-item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 {
+      font-family: 'Libre Baskerville', serif; font-size: 1rem;
+      color: var(--espresso); font-weight: 700; margin-bottom: .5rem;
+    }
+    .faq-item p { font-size: .9rem; color: var(--text-mid); line-height: 1.6; }
+
     /* ── VISIT ───────────────────────────────────── */
     .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
     .info-block h3 {
