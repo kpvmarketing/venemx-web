@@ -3,591 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venemex Bakery & Café — Prototipo First Watch</title>
+  <title>Venemex Bakery & Café | Venezuelan & Mexican Restaurant in Daytona Beach, FL</title>
+  <meta name="description" content="Venezuelan & Mexican bakery-café in Daytona Beach. Coffee, empanadas, arepas, tacos, burritos and handcrafted desserts made fresh daily. Order online or visit us on Seabreeze Blvd.">
+  <link rel="canonical" href="https://www.venemexbakerycafe.com/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Venemex Bakery & Café">
+  <meta property="og:title" content="Venemex Bakery & Café | Venezuelan & Mexican Food in Daytona Beach">
+  <meta property="og:description" content="Coffee, tequeños, empanadas, tacos and handcrafted desserts — Venezuelan & Mexican flavors made fresh daily in Daytona Beach, FL.">
+  <meta property="og:image" content="https://www.venemexbakerycafe.com/assets/fotos%20professionales/Venemex%20combo%20for%202.jpg">
+  <meta property="og:url" content="https://www.venemexbakerycafe.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Venemex Bakery & Café | Daytona Beach">
+  <meta name="twitter:description" content="Venezuelan & Mexican flavors, made fresh daily.">
+  <meta name="twitter:image" content="https://www.venemexbakerycafe.com/assets/fotos%20professionales/Venemex%20combo%20for%202.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Venemex Bakery & Café",
+    "image": "https://www.venemexbakerycafe.com/assets/logovenemex2.png",
+    "url": "https://www.venemexbakerycafe.com/",
+    "telephone": "+1-386-265-0055",
+    "servesCuisine": ["Venezuelan", "Mexican", "Bakery", "Cafe"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "201 Seabreeze Blvd",
+      "addressLocality": "Daytona Beach",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "17:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/venemexdaytona/"],
+    "menu": "https://www.venemexbakerycafe.com/#menu"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream:      #FDF8F1;
-      --parchment:  #F2E9D8;
-      --tan:        #E8DCC8;
-      --espresso:   #2C1A0E;
-      --brown:      #5C3D1E;
-      --brown-mid:  #7A5230;
-      --gold:       #B8860B;
-      --gold-light: #D4A825;
-      --olive:      #2b691f;
-      --olive-light:#2b691f;
-      --text:       #2C1A0E;
-      --text-mid:   #5C3D1E;
-      --text-muted: #8C7055;
-      --border:     rgba(44,26,14,.12);
-      --shadow:     0 2px 16px rgba(44,26,14,.09);
-      --shadow-md:  0 6px 28px rgba(44,26,14,.13);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--text); font-family: 'Lato', sans-serif; overflow-x: hidden; }
-
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--parchment); }
-    ::-webkit-scrollbar-thumb { background: var(--brown-mid); border-radius: 3px; }
-
-    /* ── TOP BAR ─────────────────────────────────── */
-    .top-bar {
-      background: var(--espresso); color: rgba(253,248,241,.6);
-      text-align: center; font-size: .68rem; letter-spacing: 2px;
-      text-transform: uppercase; padding: .5rem 1rem;
-      display: flex; align-items: center; justify-content: center; gap: .6rem;
-    }
-    .top-bar strong { color: var(--gold-light); }
-
-    /* ── NAV ─────────────────────────────────────── */
-    nav {
-      position: sticky; top: 0; z-index: 900;
-      background: var(--cream);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(44,26,14,.07);
-    }
-    .nav-logo { text-decoration: none; padding: .8rem 0; }
-    .nav-logo img { height: 52px; width: auto; display: block; }
-    .nav-links { display: flex; align-items: center; gap: 0; list-style: none; height: 100%; }
-    .nav-links li { height: 100%; }
-    .nav-links a {
-      display: flex; align-items: center; height: 100%;
-      padding: 0 1.1rem; color: var(--text-mid);
-      text-decoration: none; font-size: .72rem; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      border-bottom: 3px solid transparent;
-      transition: color .2s, border-color .2s;
-    }
-    .nav-links a:hover { color: var(--espresso); border-bottom-color: var(--gold); }
-    .nav-links a.active { color: var(--espresso); border-bottom-color: var(--olive); }
-    .nav-cta {
-      display: inline-flex; align-items: center; gap: .5rem;
-      padding: .6rem 1.4rem; background: var(--gold); color: #fff;
-      font-size: .7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px; transition: all .25s; white-space: nowrap;
-    }
-    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(184,134,11,.3); }
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; }
-    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--espresso); border-radius: 1px; transition: all .3s; }
-    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
-
-    /* ── HERO ────────────────────────────────────── */
-    .hero {
-      min-height: 88vh; display: flex; align-items: flex-end;
-      position: relative; overflow: hidden;
-      background: linear-gradient(160deg, #1C0E04 0%, #2C1A0E 100%);
-    }
-    .hero-img-placeholder {
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, rgba(44,26,14,0) 30%, rgba(44,26,14,.85) 100%),
-        linear-gradient(135deg, #3D2010 0%, #1C0E04 60%, #2A1E08 100%);
-    }
-    .hero-img-placeholder::before {
-      content: ''; position: absolute; inset: 0; opacity: .35;
-      background:
-        radial-gradient(ellipse 60% 50% at 65% 40%, rgba(184,134,11,.18) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 35% at 20% 70%, rgba(90,122,30,.12) 0%, transparent 55%);
-    }
-    .hero-photo-hint {
-      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: .8rem;
-      color: rgba(253,248,241,.2); font-size: .7rem; letter-spacing: 3px; text-transform: uppercase;
-      pointer-events: none;
-    }
-    .hero-photo-hint span { font-size: 3.5rem; opacity: .15; }
-    .hero-content {
-      position: relative; z-index: 2; padding: 0 4rem 5rem;
-      max-width: 780px;
-    }
-    .hero-tag {
-      display: inline-block; background: var(--olive); color: #fff;
-      font-size: .62rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
-      padding: .3rem .8rem; border-radius: 2px; margin-bottom: 1.2rem;
-    }
-    .hero-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      font-weight: 700; color: var(--cream); line-height: 1.08;
-      margin-bottom: 1.1rem;
-    }
-    .hero-title em { font-style: italic; color: var(--gold-light); }
-    .hero-desc {
-      font-size: 1.05rem; color: rgba(253,248,241,.7);
-      line-height: 1.75; max-width: 520px; margin-bottom: 2.2rem;
-    }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-hero-primary {
-      display: inline-block; padding: .9rem 2.2rem;
-      background: var(--gold); color: var(--espresso);
-      font-weight: 700; font-size: .8rem; letter-spacing: 2px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px; transition: all .3s;
-    }
-    .btn-hero-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,134,11,.4); }
-    .btn-hero-outline {
-      display: inline-block; padding: .9rem 2.2rem;
-      background: transparent; color: rgba(253,248,241,.85);
-      font-weight: 700; font-size: .8rem; letter-spacing: 2px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px; border: 1.5px solid rgba(253,248,241,.3); transition: all .3s;
-    }
-    .btn-hero-outline:hover { border-color: rgba(253,248,241,.7); color: #fff; }
-
-    /* ── SECTION COMMONS ─────────────────────────── */
-    .section-wrap { padding: 5.5rem 2.5rem; }
-    .section-wrap.alt { background: var(--parchment); }
-    .container { max-width: 1200px; margin: 0 auto; }
-    .section-header { text-align: center; margin-bottom: 3.5rem; }
-    .eyebrow {
-      display: inline-block; font-size: .62rem; font-weight: 700;
-      letter-spacing: 4px; text-transform: uppercase; color: var(--olive);
-      margin-bottom: .7rem;
-    }
-    .section-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700;
-      color: var(--espresso); line-height: 1.12; margin-bottom: .8rem;
-    }
-    .section-title em { font-style: italic; color: var(--gold); }
-    .section-sub { font-size: .98rem; color: var(--text-muted); line-height: 1.75; max-width: 540px; margin: 0 auto; }
-    .deco-line {
-      display: flex; align-items: center; justify-content: center; gap: 1rem;
-      margin: 1.2rem auto 0; width: 160px;
-    }
-    .deco-line::before, .deco-line::after { content: ''; flex: 1; height: 1px; background: var(--tan); }
-    .deco-line span { color: var(--gold); font-size: .9rem; }
-
-    /* ── ABOUT STRIP ─────────────────────────────── */
-    .about-strip {
-      background: var(--espresso); padding: 3rem 2.5rem;
-      display: flex; align-items: center; justify-content: center;
-      gap: 4rem; flex-wrap: wrap; text-align: center;
-    }
-    .strip-item { color: rgba(253,248,241,.75); }
-    .strip-num {
-      font-family: 'Libre Baskerville', serif; font-size: 2.4rem;
-      font-weight: 700; display: block; line-height: 1;
-    }
-    .strip-num.gold  { color: var(--gold-light); }
-    .strip-num.olive { color: #2b691f; }
-    .strip-lbl { font-size: .65rem; letter-spacing: 2.5px; text-transform: uppercase; margin-top: .3rem; display: block; }
-    .strip-divider { width: 1px; height: 48px; background: rgba(253,248,241,.12); }
-
-    /* ── MENU: CATEGORY JUMP ─────────────────────── */
-    #menu { scroll-margin-top: 72px; }
-    .cat-jump-label {
-      text-align: center; font-size: .65rem; font-weight: 700;
-      letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-    .cat-jump {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem;
-      margin-bottom: 4rem;
-    }
-    .cat-thumb {
-      display: flex; flex-direction: column; align-items: center;
-      gap: .55rem; cursor: pointer; text-decoration: none;
-      transition: transform .25s;
-      width: 110px;
-    }
-    .cat-thumb:hover { transform: translateY(-4px); }
-    .cat-thumb-img {
-      width: 90px; height: 90px; border-radius: 50%;
-      background: var(--parchment); border: 3px solid var(--tan);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.2rem; transition: border-color .25s, box-shadow .25s;
-      overflow: hidden;
-    }
-    .cat-thumb:hover .cat-thumb-img { border-color: var(--olive); box-shadow: 0 4px 16px rgba(90,122,30,.2); }
-    .cat-thumb.active .cat-thumb-img { border-color: var(--gold); box-shadow: 0 4px 16px rgba(184,134,11,.25); }
-    .cat-thumb-label {
-      font-size: .68rem; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--text-mid); text-align: center;
-    }
-    .cat-thumb:hover .cat-thumb-label { color: var(--olive); }
-    .cat-thumb.active .cat-thumb-label { color: var(--gold); }
-
-    /* ── MENU: SECTION HEADER ────────────────────── */
-    .menu-section { margin-bottom: 5rem; scroll-margin-top: 100px; display: none; }
-    .menu-section.active-cat { display: block; }
-    .menu-section-head {
-      display: flex; align-items: center; gap: 1.5rem;
-      padding-bottom: 1.4rem; margin-bottom: 2.2rem;
-      border-bottom: 1.5px solid var(--tan);
-    }
-    .menu-section-icon {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--espresso); color: var(--gold-light);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; flex-shrink: 0;
-    }
-    .menu-section-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.7rem; font-weight: 700; color: var(--espresso);
-      line-height: 1; margin-bottom: .25rem;
-    }
-    .menu-section-tagline { font-size: .82rem; color: var(--text-muted); font-style: italic; }
-
-    /* ── MENU: ITEM CARDS ────────────────────────── */
-    .menu-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.4rem; }
-    .menu-card {
-      background: #fff; border-radius: 10px; overflow: hidden;
-      border: 1px solid var(--border); box-shadow: var(--shadow);
-      transition: transform .3s, box-shadow .3s;
-      display: flex; flex-direction: column;
-    }
-    .menu-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-    .menu-card-photo {
-      height: 175px; background: var(--parchment);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3.2rem; position: relative; overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-    .menu-card-photo img {
-      width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;
-      image-rendering: -webkit-optimize-contrast;
-      filter: saturate(1.08) contrast(1.05);
-      transition: transform .4s ease;
-    }
-    .menu-card-photo img:hover { transform: scale(1.05); }
-    .menu-card-photo::after {
-      content: 'Add photo'; position: absolute;
-      bottom: .5rem; right: .7rem; font-size: .6rem;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      color: var(--text-muted); opacity: .5;
-      font-family: 'Lato', sans-serif;
-    }
-    .menu-card-photo:has(img)::after { display: none; }
-    .menu-card-body { padding: 1.3rem 1.4rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
-    .menu-card-name {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.05rem; font-weight: 700; color: var(--espresso);
-      margin-bottom: .4rem; line-height: 1.25;
-    }
-    .menu-card-desc { font-size: .82rem; color: var(--text-muted); line-height: 1.6; flex: 1; margin-bottom: 1.1rem; }
-    .menu-card-footer { display: flex; align-items: center; justify-content: space-between; }
-    .menu-card-price {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1rem; font-weight: 700; color: var(--espresso);
-    }
-    .menu-card-price.tbd { font-family: 'Lato',sans-serif; font-size: .72rem; color: var(--text-muted); font-weight: 400; letter-spacing: .5px; }
-    .btn-order-sm {
-      display: inline-flex; align-items: center; gap: .4rem;
-      padding: .4rem 1rem; background: var(--olive); color: #fff;
-      font-size: .68rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px; border: none; cursor: pointer;
-      transition: all .25s; font-family: 'Lato', sans-serif;
-    }
-    .btn-order-sm:hover { background: var(--olive-light); transform: translateY(-1px); }
-
-    /* ── FEATURED ITEM (First Watch "B.E.C." style) ── */
-    .featured-item {
-      background: var(--espresso); border-radius: 12px; overflow: hidden;
-      display: grid; grid-template-columns: 1fr 1fr;
-      margin-bottom: 2.5rem; box-shadow: var(--shadow-md);
-    }
-    .featured-photo {
-      background: linear-gradient(135deg, #3D2010, #1C0E04);
-      min-height: 280px; display: flex; align-items: center; justify-content: center;
-      font-size: 6rem; position: relative;
-    }
-    .featured-photo::before {
-      content: 'Featured Item'; position: absolute;
-      top: 1rem; left: 1rem; font-size: .6rem; letter-spacing: 2px;
-      text-transform: uppercase; color: rgba(253,248,241,.35);
-      font-family: 'Lato', sans-serif;
-    }
-    .featured-body {
-      padding: 2.5rem 2.8rem; display: flex; flex-direction: column; justify-content: center;
-    }
-    .featured-tag {
-      display: inline-block; background: var(--gold); color: var(--espresso);
-      font-size: .6rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
-      padding: .25rem .7rem; border-radius: 2px; margin-bottom: 1rem; width: fit-content;
-    }
-    .featured-name {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 2rem; font-weight: 700; color: var(--cream);
-      line-height: 1.1; margin-bottom: .8rem;
-    }
-    .featured-desc { font-size: .92rem; color: rgba(253,248,241,.65); line-height: 1.75; margin-bottom: 1.8rem; }
-    .featured-action { display: flex; gap: .8rem; align-items: center; flex-wrap: wrap; }
-    .btn-featured {
-      display: inline-block; padding: .75rem 1.8rem;
-      background: var(--gold); color: var(--espresso);
-      font-weight: 700; font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px; transition: all .3s;
-    }
-    .btn-featured:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .featured-see-more {
-      font-size: .75rem; color: rgba(253,248,241,.5); text-decoration: none;
-      letter-spacing: 1px; text-transform: uppercase; font-weight: 700;
-      transition: color .25s;
-    }
-    .featured-see-more:hover { color: rgba(253,248,241,.9); }
-
-    /* ── ABOUT ───────────────────────────────────── */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-img-wrap { position: relative; }
-    .about-img-frame {
-      position: absolute; top: -14px; left: -14px; right: 14px; bottom: 14px;
-      border: 1.5px solid var(--tan); border-radius: 4px; pointer-events: none;
-    }
-    .about-img-placeholder {
-      aspect-ratio: 4/5;
-      background: linear-gradient(145deg, var(--parchment), var(--tan));
-      border: 1px solid var(--border); border-radius: 4px;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: .8rem; color: var(--text-muted); font-size: .72rem;
-      letter-spacing: 2px; text-transform: uppercase; text-align: center; padding: 2rem;
-    }
-    .about-img-placeholder span:first-child { font-size: 2.8rem; opacity: .25; }
-    .about-tags { display: flex; gap: .7rem; margin-top: 2rem; flex-wrap: wrap; }
-    .about-tag {
-      display: flex; align-items: center; gap: .4rem;
-      font-size: .7rem; color: var(--text-mid); letter-spacing: .5px;
-      background: var(--parchment); border: 1px solid var(--border);
-      border-radius: 20px; padding: .28rem .75rem;
-    }
-    .about-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-    .about-tag:nth-child(1)::before { background: var(--gold); }
-    .about-tag:nth-child(2)::before { background: var(--olive); }
-    .about-tag:nth-child(3)::before { background: var(--brown-mid); }
-    .about-tag:nth-child(4)::before { background: linear-gradient(135deg,var(--gold),var(--olive)); }
-    .family-badge {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: var(--espresso); color: var(--cream);
-      font-size: .68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-      padding: .45rem 1rem; border-radius: 3px; margin-bottom: 1.5rem;
-    }
-    .family-badge span { font-size: 1rem; }
-    .about-lead { font-size: 1rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 1rem; }
-    @media(max-width:900px){ .about-grid{grid-template-columns:1fr;gap:2.5rem} .about-img-wrap{max-width:360px} }
-
-    /* ── NUTRITION PANEL ────────────────────────── */
-    .nutr-toggle {
-      width: 100%; background: none; border: none; border-top: 1px solid var(--border);
-      padding: .55rem 1.4rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between;
-      font-family: 'Lato', sans-serif; font-size: .65rem; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted);
-      transition: color .2s, background .2s;
-    }
-    .nutr-toggle:hover { color: var(--olive); background: var(--parchment); }
-    .nutr-arrow { transition: transform .3s; font-size: .75rem; display: inline-block; }
-    .menu-card.nutr-open .nutr-arrow { transform: rotate(180deg); }
-    .nutr-panel {
-      max-height: 0; overflow: hidden;
-      transition: max-height .4s ease;
-    }
-    .menu-card.nutr-open .nutr-panel { max-height: 500px; }
-    .nutr-macros {
-      display: grid; grid-template-columns: repeat(4,1fr);
-      gap: 0; background: var(--espresso);
-    }
-    .nutr-macro {
-      text-align: center; padding: .75rem .4rem;
-      border-right: 1px solid rgba(255,255,255,.08);
-    }
-    .nutr-macro:last-child { border-right: none; }
-    .nutr-macro-val {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.1rem; font-weight: 700; color: #fff; line-height: 1;
-      display: block;
-    }
-    .nutr-macro:nth-child(1) .nutr-macro-val { color: var(--gold-light); }
-    .nutr-macro:nth-child(4) .nutr-macro-val { color: #2b691f; }
-    .nutr-macro-lbl {
-      font-size: .5rem; letter-spacing: 1.5px; text-transform: uppercase;
-      color: rgba(255,255,255,.45); margin-top: .18rem; display: block;
-    }
-    .nutr-table { padding: .7rem 1.2rem .6rem; background: #fff; }
-    .nutr-row {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: .2rem 0; border-bottom: 1px solid rgba(44,26,14,.06);
-      font-size: .73rem;
-    }
-    .nutr-row:last-child { border-bottom: none; }
-    .nutr-lbl { color: var(--text-mid); }
-    .nutr-val { color: var(--espresso); font-weight: 700; white-space: nowrap; }
-    .nutr-row.sub .nutr-lbl { padding-left: .9rem; color: var(--text-muted); font-size: .7rem; }
-    .nutr-allergens {
-      padding: .5rem 1.2rem .7rem; font-size: .68rem;
-      color: var(--text-muted); line-height: 1.55;
-      border-top: 1px solid var(--border); background: var(--parchment);
-    }
-    .nutr-allergens strong { color: var(--brown-mid); }
-    .nutr-disclaimer {
-      padding: .4rem 1.2rem .55rem; font-size: .6rem;
-      color: rgba(44,26,14,.35); font-style: italic;
-      border-top: 1px solid var(--border); background: var(--parchment);
-      line-height: 1.4;
-    }
-
-    /* ── VISIT ───────────────────────────────────── */
-    .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
-    .info-block h3 {
-      font-family: 'Libre Baskerville', serif; font-size: .95rem;
-      color: var(--espresso); font-weight: 700; margin: 1.8rem 0 .7rem;
-      display: flex; align-items: center; gap: .5rem;
-    }
-    .info-block h3:first-child { margin-top: 0; }
-    .info-block h3 .ico { color: var(--olive); font-style: normal; }
-    .info-row { font-size: .9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: .3rem; }
-    .info-row a { color: var(--text-mid); text-decoration: none; }
-    .info-row a:hover { color: var(--olive); }
-    .hours-table { width: 100%; border-collapse: collapse; }
-    .hours-table tr { border-bottom: 1px solid var(--border); }
-    .hours-table tr:last-child { border-bottom: none; }
-    .hours-table td { padding: .42rem 0; font-size: .85rem; color: var(--text-mid); }
-    .hours-table td:first-child { color: var(--text-muted); width: 50%; }
-    .hours-table tr.closed td { color: rgba(44,26,14,.3); }
-    .map-placeholder {
-      background: var(--parchment); border-radius: 10px; border: 1px solid var(--border);
-      min-height: 380px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 1rem;
-      color: var(--text-muted); position: relative; overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .map-placeholder::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(rgba(44,26,14,.03) 1px,transparent 1px), linear-gradient(90deg,rgba(44,26,14,.03) 1px,transparent 1px);
-      background-size: 28px 28px;
-    }
-    .map-pin { font-size: 3rem; animation: bounce 2.4s ease-in-out infinite; }
-    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-    .map-address { text-align: center; position: relative; }
-    .map-address strong { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--espresso); display: block; margin-bottom: .2rem; }
-    .map-address span { font-size: .85rem; }
-    .btn-map {
-      display: inline-block; padding: .55rem 1.4rem;
-      background: var(--espresso); color: var(--cream);
-      font-size: .7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-      text-decoration: none; border-radius: 3px; transition: all .25s; position: relative;
-    }
-    .btn-map:hover { background: var(--brown); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(44,26,14,.2); }
-
-    /* ── SOCIAL PROOF STRIP ──────────────────────── */
-    .social-strip {
-      background: var(--olive); padding: 2.5rem 2.5rem;
-      text-align: center;
-    }
-    .social-strip p { color: rgba(255,255,255,.75); font-size: .82rem; letter-spacing: 1px; margin-bottom: .8rem; text-transform: uppercase; }
-    .social-strip h3 { font-family: 'Libre Baskerville', serif; font-size: 1.6rem; color: #fff; font-weight: 700; }
-    .social-strip em { font-style: italic; color: rgba(255,255,255,.75); }
-    .social-follow { display: flex; justify-content: center; gap: 1rem; margin-top: 1.2rem; }
-    .soc-btn {
-      display: inline-flex; align-items: center; gap: .5rem;
-      padding: .5rem 1.2rem; border: 1.5px solid rgba(255,255,255,.4);
-      color: #fff; text-decoration: none; border-radius: 3px;
-      font-size: .7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      transition: all .25s;
-    }
-    .soc-btn:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.8); }
-
-    /* ── FOOTER ──────────────────────────────────── */
-    footer { background: var(--espresso); padding: 4rem 2.5rem 2.5rem; }
-    .foot-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-    .foot-brand img { height: 80px; width: auto; margin-bottom: 1rem; }
-    .foot-brand p { font-size: .85rem; color: rgba(253,248,241,.5); line-height: 1.7; max-width: 260px; }
-    .foot-col h4 { font-family: 'Libre Baskerville', serif; font-size: .85rem; color: rgba(253,248,241,.5); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
-    .foot-col a { display: block; color: rgba(253,248,241,.65); text-decoration: none; font-size: .88rem; margin-bottom: .45rem; transition: color .2s; }
-    .foot-col a:hover { color: var(--gold-light); }
-    .foot-bottom { max-width: 1200px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(253,248,241,.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .foot-copy { font-size: .72rem; color: rgba(253,248,241,.28); }
-    .foot-socials { display: flex; gap: .6rem; }
-    .foot-soc { width: 34px; height: 34px; border: 1px solid rgba(253,248,241,.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: rgba(253,248,241,.4); text-decoration: none; transition: all .25s; }
-    .foot-soc:hover { border-color: var(--gold-light); color: var(--gold-light); }
-
-    /* ── WHATSAPP FLOAT ──────────────────────────── */
-    .wa-float { position: fixed; bottom: 1.8rem; right: 1.8rem; z-index: 999; display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-    .wa-bubble { width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 1.5px solid rgba(44,26,14,.12); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); transition: all .3s; }
-    .wa-float:hover .wa-bubble { transform: scale(1.08); box-shadow: 0 6px 22px rgba(44,26,14,.18); }
-    .wa-label { background: var(--espresso); color: var(--cream); font-weight: 700; font-size: .72rem; letter-spacing: 1px; padding: .45rem .9rem; border-radius: 20px; white-space: nowrap; box-shadow: var(--shadow); opacity: 0; transform: translateX(8px); transition: all .3s; }
-    .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
-
-    /* ── BACK TO TOP ──────────────────────────────── */
-    .top-float {
-      position: fixed; bottom: 1.6rem; left: 1.6rem; z-index: 999;
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--espresso); color: var(--gold-light);
-      border: none; display: flex; align-items: center; justify-content: center;
-      box-shadow: var(--shadow); cursor: pointer;
-      opacity: 0; visibility: hidden; transform: translateY(12px);
-      transition: opacity .3s, transform .3s, visibility .3s;
-    }
-    .top-float.show { opacity: .55; visibility: visible; transform: translateY(0); }
-    .top-float:hover { opacity: 1; transform: translateY(-3px); box-shadow: var(--shadow-md); }
-
-    /* ── REVEAL ──────────────────────────────────── */
-    .rv  { opacity:0; transform:translateY(28px); transition:opacity .7s ease,transform .7s ease; }
-    .rvl { opacity:0; transform:translateX(-28px); transition:opacity .7s ease,transform .7s ease; }
-    .rvr { opacity:0; transform:translateX(28px); transition:opacity .7s ease,transform .7s ease; }
-    .rvs { opacity:0; transform:scale(.92); transition:opacity .7s ease,transform .7s ease; }
-    .rv.on,.rvl.on,.rvr.on,.rvs.on { opacity:1; transform:none; }
-    [data-d="1"]{transition-delay:.07s}[data-d="2"]{transition-delay:.14s}[data-d="3"]{transition-delay:.21s}
-    [data-d="4"]{transition-delay:.28s}[data-d="5"]{transition-delay:.35s}[data-d="6"]{transition-delay:.42s}
-
-    /* ── LANGUAGE TOGGLE ────────────────────────── */
-    .lang-toggle { display: flex; background: var(--parchment); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
-    .lang-btn { padding: .28rem .65rem; font-size: .65rem; font-weight: 700; letter-spacing: 1.5px; cursor: pointer; background: none; border: none; color: var(--text-muted); transition: all .25s; font-family: 'Lato', sans-serif; }
-    .lang-btn.active { background: var(--espresso); color: var(--cream); border-radius: 20px; }
-
-    /* ── RESPONSIVE ──────────────────────────────── */
-    @media(max-width:980px){
-      .menu-grid { grid-template-columns: repeat(2,1fr); }
-      .featured-item { grid-template-columns: 1fr; }
-      .featured-photo { min-height: 200px; }
-      .visit-grid { grid-template-columns: 1fr; }
-      .foot-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media(max-width:768px){
-      nav { padding: 0 1.2rem; }
-      .nav-links { display:none; position:fixed; inset:0; background:rgba(253,248,241,.98); flex-direction:column; align-items:center; justify-content:center; gap:2rem; z-index:999; }
-      .nav-links.open { display:flex; }
-      .nav-links a { font-size:.9rem; letter-spacing:2px; height:auto; padding:.5rem 0; border-bottom:none; }
-      .nav-cta { display:none; }
-      .nav-toggle { display:flex; }
-      .hero-content { padding: 0 1.8rem 3.5rem; }
-      .menu-grid { grid-template-columns: 1fr; }
-      .section-wrap { padding: 4rem 1.5rem; }
-      .foot-grid { grid-template-columns: 1fr; }
-      .about-strip { gap: 2rem; }
-      .strip-divider { display: none; }
-    }
-
-    /* ── PHOTO LIGHTBOX ──────────────────────────── */
-    .about-img-placeholder { cursor: zoom-in; }
-    .photo-lightbox {
-      position: fixed; inset: 0; background: rgba(20,12,6,.92);
-      display: flex; align-items: center; justify-content: center;
-      padding: 3rem 1.5rem; z-index: 999; opacity: 0; pointer-events: none;
-      transition: opacity .25s ease;
-    }
-    .photo-lightbox.open { opacity: 1; pointer-events: auto; }
-    .photo-lightbox img {
-      max-width: 100%; max-height: 100%; object-fit: contain;
-      border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,.5);
-      transform: scale(.96); transition: transform .25s ease;
-    }
-    .photo-lightbox.open img { transform: scale(1); }
-    .photo-lightbox-close {
-      position: absolute; top: 1.2rem; right: 1.5rem;
-      width: 42px; height: 42px; border-radius: 50%; border: none;
-      background: rgba(255,255,255,.12); color: #fff; font-size: 1.4rem;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background .2s;
-    }
-    .photo-lightbox-close:hover { background: rgba(255,255,255,.25); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -622,7 +91,7 @@
       </div>
     </li>
   </ul>
-  <a href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" class="nav-cta" id="navOrder" data-en="Order Now" data-es="Ordenar">
+  <a href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" rel="noopener" class="nav-cta" id="navOrder" data-en="Order Now" data-es="Ordenar">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L20.55 5H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
     Order Now
   </a>
@@ -637,7 +106,7 @@
   </div>
   <div class="hero-content">
     <span class="hero-tag" data-en="Daytona Beach, Florida" data-es="Daytona Beach, Florida">Daytona Beach, Florida</span>
-    <h1 class="hero-title" data-en="Venezuelan &amp; Mexican.<br><em>One beautiful table.</em>" data-es="Venezolano &amp; Mexicano.<br><em>Una mesa que enamora.</em>">Venezuelan &amp; Mexican.<br><em>One beautiful table.</em></h1>
+    <h1 class="hero-title" data-en="Venezuelan &amp; Mexican Bakery &amp; Café — <em>One beautiful table.</em>" data-es="Panadería &amp; Café Venezolano &amp; Mexicano — <em>Una mesa que enamora.</em>">Venezuelan &amp; Mexican Bakery &amp; Café — <em>One beautiful table.</em></h1>
     <p class="hero-desc" data-en="Coffee, tequeños, empanadas, tortas and handcrafted sweets — made fresh every morning from two proud cultures, right here in Daytona Beach." data-es="Café, tequeños, empanadas, tortas y dulces artesanales — hechos frescos cada mañana desde dos culturas orgullosas, aquí en Daytona Beach.">Coffee, tequeños, empanadas, tortas and handcrafted sweets — made fresh every morning from two proud cultures, right here in Daytona Beach.</p>
     <div class="hero-actions">
       <a href="#menu"  class="btn-hero-primary" data-en="See Our Menu" data-es="Ver la Carta">See Our Menu</a>
@@ -788,7 +257,7 @@
         <h3 class="featured-name" data-en="Arepa Llanera" data-es="Arepa Llanera">Arepa Llanera</h3>
         <p class="featured-desc" data-en="Grilled beef, grilled chicken, hand cheese (queso de mano) and guasacaca — Venezuela's most complete arepa. Packed with flavor and made fresh to order every time." data-es="Carne asada, pollo asado, queso de mano y guasacaca — la arepa venezolana más completa. Llena de sabor y hecha fresca al momento.">Grilled beef, grilled chicken, hand cheese (queso de mano) and guasacaca — Venezuela's most complete arepa. Packed with flavor and made fresh to order every time.</p>
         <div class="featured-action">
-          <a href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" class="btn-featured" id="featOrderBtn" data-en="Order Now" data-es="Ordenar">Order Now</a>
+          <a href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" rel="noopener" class="btn-featured" id="featOrderBtn" data-en="Order Now" data-es="Ordenar">Order Now</a>
           <a href="#sec-arepas" class="featured-see-more" data-en="See all arepas →" data-es="Ver todas las arepas →">See all arepas →</a>
         </div>
       </div>
@@ -805,7 +274,7 @@
       </div>
 
         <div class="menu-card rv" data-d="1">
-          <div class="menu-card-photo"><img src="assets/arepa-de-queso.jpg" alt="Arepa de Queso" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/arepa-de-queso.webp" type="image/webp"><img src="assets/arepa-de-queso.jpg" alt="Arepa de Queso" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Arepa de Queso</div>
             <div class="menu-card-desc" data-en="Classic arepa with white cheese." data-es="Arepa rellena de queso blanco.">Classic arepa with white cheese.</div>
@@ -915,7 +384,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="6">
-          <div class="menu-card-photo"><img src="assets/arepa-pelua.jpg" alt="Arepa La Pelúa" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/arepa-pelua.webp" type="image/webp"><img src="assets/arepa-pelua.jpg" alt="Arepa La Pelúa" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Arepa La Pelúa</div>
             <div class="menu-card-desc" data-en="Shredded beef with white cheese." data-es="Carne mechada y queso blanco.">Shredded beef with white cheese.</div>
@@ -981,7 +450,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="3">
-          <div class="menu-card-photo"><img src="assets/arepa-reina-pepiada.jpg" alt="Arepa Reina Pepiada" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/arepa-reina-pepiada.webp" type="image/webp"><img src="assets/arepa-reina-pepiada.jpg" alt="Arepa Reina Pepiada" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Arepa Reina Pepiada</div>
             <div class="menu-card-desc" data-en="Avocado and shredded chicken." data-es="Aguacate y pollo mechado.">Avocado and shredded chicken.</div>
@@ -1036,7 +505,7 @@
       </div>
       <div class="menu-grid">
         <div class="menu-card rv" data-d="1">
-          <div class="menu-card-photo"><img src="assets/patacon-carne-mechada.jpg" alt="Patacón de Carne Mechada" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/patacon-carne-mechada.webp" type="image/webp"><img src="assets/patacon-carne-mechada.jpg" alt="Patacón de Carne Mechada" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Patacón de Carne Mechada</div>
             <div class="menu-card-desc" data-en="Fried plantain with shredded beef, lettuce, tomato, cabbage, cheese, ham and sauces." data-es="Patacón con carne mechada, lechuga, tomate, repollo, queso, jamón y salsas.">Fried plantain with shredded beef, lettuce, tomato, cabbage, cheese, ham and sauces.</div>
@@ -1159,7 +628,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="3">
-          <div class="menu-card-photo"><img src="assets/tacos-carnita.jpg" alt="Tacos de Carnitas" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/tacos-carnita.webp" type="image/webp"><img src="assets/tacos-carnita.jpg" alt="Tacos de Carnitas" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Tacos de Carnitas</div>
             <div class="menu-card-desc" data-en="Order of 3. Without sides $10.99 · With rice &amp; beans or fries $15.99." data-es="Orden de 3. Sin acompañantes $10.99 · Con arroz y frijol o papas $15.99.">Order of 3. Without sides $10.99 · With rice &amp; beans or fries $15.99.</div>
@@ -1273,7 +742,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="2">
-          <div class="menu-card-photo"><img src="assets/lomo-salteado.jpg" alt="Lomo Saltado" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/lomo-salteado.webp" type="image/webp"><img src="assets/lomo-salteado.jpg" alt="Lomo Saltado" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Lomo Saltado</div>
             <div class="menu-card-desc" data-en="White rice, sirloin, fries, onion and tomato." data-es="Arroz blanco, lomo, papas fritas, cebolla y tomate.">White rice, sirloin, fries, onion and tomato.</div>
@@ -1396,7 +865,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="4">
-          <div class="menu-card-photo"><img src="assets/side-papas.jpg" alt="Papas Fritas" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/side-papas.webp" type="image/webp"><img src="assets/side-papas.jpg" alt="Papas Fritas" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Papas Fritas</div>
             <div class="menu-card-desc" data-en="Golden crispy french fries." data-es="Papas fritas crujientes.">Golden crispy french fries.</div>
@@ -1418,7 +887,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="6">
-          <div class="menu-card-photo"><img src="assets/side-tequenos.jpg" alt="Tequeños" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/side-tequenos.webp" type="image/webp"><img src="assets/side-tequenos.jpg" alt="Tequeños" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Tequeños (6 pzs)</div>
             <div class="menu-card-desc" data-en="6 golden Venezuelan cheese sticks." data-es="6 tequeños de queso venezolano dorados.">6 golden Venezuelan cheese sticks.</div>
@@ -1475,7 +944,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="2">
-          <div class="menu-card-photo"><img src="assets/empanada-carne-mechada.jpg" alt="Empanada de Carne Mechada" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/empanada-carne-mechada.webp" type="image/webp"><img src="assets/empanada-carne-mechada.jpg" alt="Empanada de Carne Mechada" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Empanada de Carne Mechada</div>
             <div class="menu-card-desc" data-en="Cornmeal empanada with shredded beef." data-es="Empanada de maíz rellena de carne mechada.">Cornmeal empanada with shredded beef.</div>
@@ -1655,7 +1124,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="2">
-          <div class="menu-card-photo"><img src="assets/sandwich-jamon-queso.jpg" alt="Ham & Cheese" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/sandwich-jamon-queso.webp" type="image/webp"><img src="assets/sandwich-jamon-queso.jpg" alt="Ham & Cheese" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Ham &amp; Cheese</div>
             <div class="menu-card-desc" data-en="Classic ham and cheese sandwich." data-es="Sándwich clásico de jamón y queso.">Classic ham and cheese sandwich.</div>
@@ -2580,7 +2049,7 @@
           </div>
         </div>
         <div class="menu-card rv" data-d="1">
-          <div class="menu-card-photo"><img src="assets/churro-cheesecake.jpg" alt="Churro Cheesecake" loading="lazy"></div>
+          <div class="menu-card-photo"><picture><source srcset="assets/churro-cheesecake.webp" type="image/webp"><img src="assets/churro-cheesecake.jpg" alt="Churro Cheesecake" loading="lazy"></picture></div>
           <div class="menu-card-body">
             <div class="menu-card-name">Churro Cheesecake</div>
             <div class="menu-card-desc" data-en="Cheesecake bars with churro cinnamon-sugar and dulce de leche drizzle." data-es="Barras de cheesecake con azúcar y canela estilo churro y dulce de leche.">Cheesecake bars with churro cinnamon-sugar and dulce de leche drizzle.</div>
@@ -2862,7 +2331,7 @@
       <span class="eyebrow" data-en="Place Your Order" data-es="Haz tu Pedido">Place Your Order</span>
       <h2 class="section-title" data-en="Ready to <em>Order?</em>" data-es="¿Listo para <em>Ordenar?</em>">Ready to <em>Order?</em></h2>
       <p class="section-sub" style="margin-bottom:2.2rem" data-en="Order online for pickup or delivery." data-es="Ordena en línea para pickup o delivery.">Order online for pickup or delivery.</p>
-      <a id="ddOrderBtn" href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" style="display:inline-flex;align-items:center;gap:.65rem;padding:.9rem 2rem;background:var(--gold);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .3s" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">
+      <a id="ddOrderBtn" href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.65rem;padding:.9rem 2rem;background:var(--gold);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .3s" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L20.55 5H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
         <span data-en="Order Now" data-es="Ordenar Ahora">Order Now</span>
       </a>
@@ -2875,7 +2344,7 @@
   <p data-en="Follow our daily specials" data-es="Síguenos para las especialidades del día">Follow our daily specials</p>
   <h3 data-en="Two Countries. <em>One Flavor.</em>" data-es="Dos Países. <em>Un Sabor.</em>">Two Countries. <em>One Flavor.</em></h3>
   <div class="social-follow">
-    <a href="https://www.instagram.com/venemexdaytona/" target="_blank" class="soc-btn">
+    <a href="https://www.instagram.com/venemexdaytona/" target="_blank" rel="noopener" class="soc-btn">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       @venemexdaytona
     </a>
@@ -2914,7 +2383,7 @@
             <strong>Venemex Bakery &amp; Café</strong>
             <span>201 Seabreeze Blvd, Daytona Beach, FL</span>
           </div>
-          <a href="https://maps.google.com/?q=201+Seabreeze+Blvd+Daytona+Beach+FL" target="_blank" class="btn-map" data-en="Open in Google Maps" data-es="Abrir en Google Maps">Open in Google Maps</a>
+          <a href="https://maps.google.com/?q=201+Seabreeze+Blvd+Daytona+Beach+FL" target="_blank" rel="noopener" class="btn-map" data-en="Open in Google Maps" data-es="Abrir en Google Maps">Open in Google Maps</a>
         </div>
       </div>
     </div>
@@ -2922,7 +2391,7 @@
 </div>
 
 <!-- ═══ DOORDASH FLOAT ════════════════════════════ -->
-<a class="wa-float" id="ddFloatBtn" href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" aria-label="Order on DoorDash">
+<a class="wa-float" id="ddFloatBtn" href="https://order.online/business/venemex-bakery-and-coffee-22060467" target="_blank" rel="noopener" aria-label="Order on DoorDash">
   <span class="wa-label" data-en="Order Now" data-es="Ordenar">Order Now</span>
   <div class="wa-bubble">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="#B8860B"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L20.55 5H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
@@ -2958,14 +2427,14 @@
     <div class="foot-col">
       <h4>Visit Us</h4>
       <a href="tel:3862650055">(386) 265-0055</a>
-      <a href="https://maps.google.com/?q=201+Seabreeze+Blvd+Daytona+Beach+FL" target="_blank">201 Seabreeze Blvd<br>Daytona Beach, FL</a>
-      <a href="https://www.instagram.com/venemexdaytona/" target="_blank">@venemexdaytona</a>
+      <a href="https://maps.google.com/?q=201+Seabreeze+Blvd+Daytona+Beach+FL" target="_blank" rel="noopener">201 Seabreeze Blvd<br>Daytona Beach, FL</a>
+      <a href="https://www.instagram.com/venemexdaytona/" target="_blank" rel="noopener">@venemexdaytona</a>
     </div>
   </div>
   <div class="foot-bottom">
     <p class="foot-copy">© 2025 Venemex Bakery &amp; Café · 201 Seabreeze Blvd, Daytona Beach, FL · (386) 265-0055</p>
     <div class="foot-socials">
-      <a href="https://www.instagram.com/venemexdaytona/" target="_blank" class="foot-soc" title="Instagram">
+      <a href="https://www.instagram.com/venemexdaytona/" target="_blank" rel="noopener" class="foot-soc" title="Instagram">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
     </div>
