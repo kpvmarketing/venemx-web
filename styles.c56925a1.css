@@ -194,10 +194,10 @@
       background: var(--parchment); border: 3px solid var(--tan);
       display: flex; align-items: center; justify-content: center;
       font-size: 2.2rem; transition: border-color .25s, box-shadow .25s;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
     .cat-thumb-img img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
       filter: saturate(1.08) contrast(1.05);
     }
     .cat-thumb:hover .cat-thumb-img { border-color: var(--olive); box-shadow: 0 4px 16px rgba(59,79,20,.2); }
@@ -246,7 +246,7 @@
       border-bottom: 1px solid var(--border);
     }
     .menu-card-photo img {
-      width: 100%; height: 100%; object-fit: cover; cursor: zoom-in;
+      width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; cursor: zoom-in;
       image-rendering: -webkit-optimize-contrast;
       filter: saturate(1.08) contrast(1.05);
       transition: transform .4s ease;
