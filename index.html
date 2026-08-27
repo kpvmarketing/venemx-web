@@ -3092,11 +3092,15 @@ document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
 /* CATEGORY TABS: show only the selected menu section at a time */
 const menuSections=document.querySelectorAll('.menu-section');
 const thumbs=document.querySelectorAll('.cat-thumb');
-function showMenuCategory(id){
+function showMenuCategory(id,opts){
+  opts=opts||{};
   menuSections.forEach(s=>s.classList.toggle('active-cat',s.id===id));
   thumbs.forEach(t=>t.classList.toggle('active',t.getAttribute('href')==='#'+id));
-  const target=document.getElementById(id);
-  if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+  try{localStorage.setItem('venemexActiveCat',id);}catch(e){}
+  if(!opts.skipScroll){
+    const target=document.getElementById(id);
+    if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+  }
 }
 document.querySelectorAll('a[href^="#sec-"]').forEach(a=>{
   a.addEventListener('click',e=>{
@@ -3104,6 +3108,15 @@ document.querySelectorAll('a[href^="#sec-"]').forEach(a=>{
     showMenuCategory(a.getAttribute('href').slice(1));
   });
 });
+/* Restore the category the visitor had open before a refresh */
+(function(){
+  try{
+    const saved=localStorage.getItem('venemexActiveCat');
+    if(saved&&document.getElementById(saved)){
+      showMenuCategory(saved,{skipScroll:true});
+    }
+  }catch(e){}
+})();
 
 /* SMOOTH SCROLL (all other anchors) */
 document.querySelectorAll('a[href^="#"]:not([href^="#sec-"])').forEach(a=>{
