@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHVZN6G2NW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QHVZN6G2NW');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Venemex Bakery & Café | Venezuelan & Mexican Restaurant in Daytona Beach, FL</title>
@@ -3184,6 +3192,20 @@ const DD_URL='https://order.online/business/venemex-bakery-and-coffee-22060467';
 ['ddFloatBtn','ddOrderBtn','navOrder','featOrderBtn'].forEach(id=>{const el=document.getElementById(id);if(el)el.href=DD_URL;});
 document.querySelectorAll('.btn-order-sm').forEach(btn=>btn.setAttribute('href',DD_URL));
 
+/* GA4 EVENT TRACKING */
+document.querySelectorAll('#ddFloatBtn,#ddOrderBtn,#navOrder,#featOrderBtn,.btn-order-sm').forEach(el=>{
+  el.addEventListener('click',()=>{ if(typeof gtag==='function') gtag('event','order_now_click',{link_id:el.id||null,link_url:DD_URL}); });
+});
+document.querySelectorAll('a[href^="tel:"]').forEach(el=>{
+  el.addEventListener('click',()=>{ if(typeof gtag==='function') gtag('event','phone_click',{phone_number:el.getAttribute('href').replace('tel:','')}); });
+});
+document.querySelectorAll('a[href*="google.com/maps"]').forEach(el=>{
+  el.addEventListener('click',()=>{ if(typeof gtag==='function') gtag('event','maps_click',{link_url:el.href}); });
+});
+document.querySelectorAll('a[href*="instagram.com"]').forEach(el=>{
+  el.addEventListener('click',()=>{ if(typeof gtag==='function') gtag('event','instagram_click',{link_url:el.href}); });
+});
+
 /* BACK TO TOP */
 const topBtn=document.getElementById('topFloatBtn');
 window.addEventListener('scroll',()=>{topBtn.classList.toggle('show',window.scrollY>500);});
@@ -3197,6 +3219,7 @@ function setLang(lang){
   document.querySelectorAll('[data-en]').forEach(el=>{
     const v=el.getAttribute('data-'+lang);if(v!=null)el.innerHTML=v;
   });
+  if(typeof gtag==='function') gtag('event','language_change',{language:lang});
 }
 
 /* PHOTO LIGHTBOX */
