@@ -1,6 +1,7 @@
 {
   "name": "venemex-web",
   "scripts": {
-    "start": "npx serve . -l $PORT"
+    "start": "npx serve public -l $PORT",
+    "generate": "node build.js"
   }
 }
