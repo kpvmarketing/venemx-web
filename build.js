@@ -216,7 +216,7 @@ function restaurantSchema(lang) {
     name: 'Venemex Bakery & Café',
     description: T[lang].restaurantDescription,
     url: SITE + HOME[lang],
-    image: ['venemex-combo-for-2-v2.jpg', 'triple-chocolate-cake-v2.jpg', 'arepa-pabellon.jpg', 'pan-dulce-v2.jpg', 'cheesecake-de-arandanos-v2.jpg'].map((f) => `${SITE}/assets/${f}`),
+    image: ['venemex-combo-for-2-v2.jpg', 'triple-chocolate-cake-v2.jpg', 'arepa-pabellon-v2.jpg', 'pan-dulce-v2.jpg', 'cheesecake-de-arandanos-v2.jpg'].map((f) => `${SITE}/assets/${f}`),
     logo: `${SITE}/assets/logovenemex2.png`,
     telephone: '+1-386-265-0055',
     priceRange: '$$',
