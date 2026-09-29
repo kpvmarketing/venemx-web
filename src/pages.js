@@ -57,7 +57,7 @@ module.exports = {
   empanadas: {
     paths: { en: '/empanadas-daytona-beach/', es: '/es/empanadas-daytona-beach/' },
     cards: [['sec-empanadas'], ['sec-combos', /Combo #2/]],
-    ogImage: '/assets/empanada-carne-mechada.jpg',
+    ogImage: '/assets/empanada-carne-mechada-v2.jpg',
     en: {
       title: 'Venezuelan Empanadas in Daytona Beach | Venemex',
       description: 'Venezuelan cornmeal empanadas in Daytona Beach with cheese, shredded beef or shredded chicken, $4.50 each. Order for pickup or delivery at Venemex.',
