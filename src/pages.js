@@ -19,7 +19,7 @@ module.exports = {
       lead: 'Arepas (Venezuelan corn cakes) made from corn flour, split open and stuffed to order.',
       intro: [
         'An arepa is Venezuela’s everyday bread: a round corn cake made from corn flour, split open and filled. At Venemex, our Venezuelan restaurant on Seabreeze Blvd, you can keep it simple with an Arepa de Queso or try the classics — the Reina Pepiada (shredded chicken with avocado), the Arepa Pabellón (shredded beef, black beans, sweet plantain and white cheese) or the Arepa La Pelúa (shredded beef with white cheese).',
-        'Our customer favorite is the Arepa Llanera: grilled beef, grilled chicken, queso de mano (hand cheese) and guasacaca, a Venezuelan avocado sauce. Arepas start at $9.99, and from 8 to 11 AM the Arepa con Huevo y Jamón comes with a café con leche as a breakfast combo.',
+        'Our customer favorite is the Arepa Llanera: grilled beef, grilled chicken, queso de mano (hand cheese) and guasacaca, a classic Venezuelan sauce. Arepas start at $9.99, and from 8 to 11 AM the Arepa con Huevo y Jamón comes with a café con leche as a breakfast combo.',
         'Want something different? Try our <a href="/#sec-patacones">patacones</a> — crispy fried green plantain used as the bread.'
       ],
       menuTitle: 'Our <em>Arepas</em>',
@@ -111,7 +111,7 @@ module.exports = {
       lead: 'Venezuelan & Latin pastries, cakes and flan, baked fresh daily at Venemex Bakery & Café.',
       intro: [
         'Our bakery case brings together Venezuelan, Mexican and Latin American favorites, baked fresh daily: classic caramel flan and chocoflán, tres leches, creamy cheesecakes (including mango, blueberry and churro cheesecake), red velvet, dulce de leche and triple chocolate cakes, and tiramisú.',
-        'From the bakery side: Venezuelan golfeados and cachitos, pan de queso, Mexican conchas and pan dulce, pan de guayaba, croissants, alfajores, cookies and cinnamon rolls — perfect with a café con leche. Prices start at $1.99; ask in store for today’s pan dulce.'
+        'From the bakery side: Venezuelan golfeados and cachitos, pan de queso, Mexican conchas and pan dulce, pan de guayaba, croissants, alfajores, cookies and cinnamon rolls — perfect with a café con leche. Prices start at $1.99, and the selection changes a little every day depending on what Grandma baked that morning.'
       ],
       menuTitle: 'Desserts &amp; <em>Pastries</em>',
       faq: [
@@ -130,7 +130,7 @@ module.exports = {
       lead: 'Postres venezolanos y latinoamericanos, tortas y flan, frescos cada día en Venemex Bakery & Café.',
       intro: [
         'Nuestra vitrina reúne favoritos venezolanos, mexicanos y latinoamericanos, frescos cada día: flan de caramelo y chocoflán, tres leches, cheesecakes cremosos (de mango, de arándanos y churro cheesecake, entre otros), tortas red velvet, de dulce de leche y triple chocolate, y tiramisú.',
-        'De la panadería: golfeados y cachitos venezolanos, pan de queso, conchas y pan dulce mexicano, pan de guayaba, croissants, alfajores, galletas y rolls de canela — perfectos con un café con leche. Desde $1.99; pregunta en tienda por el pan dulce del día.'
+        'De la panadería: golfeados y cachitos venezolanos, pan de queso, conchas y pan dulce mexicano, pan de guayaba, croissants, alfajores, galletas y rolls de canela — perfectos con un café con leche. Desde $1.99, y la selección cambia un poco cada día según lo que haya horneado la abuela esa mañana.'
       ],
       menuTitle: 'Postres y <em>Panadería</em>',
       faq: [
