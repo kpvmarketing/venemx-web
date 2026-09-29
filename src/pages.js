@@ -9,7 +9,7 @@ module.exports = {
     paths: { en: '/arepas-daytona-beach/', es: '/es/arepas-daytona-beach/' },
     // which cards to show: [menu section id, optional name filter]
     cards: [['sec-arepas'], ['sec-des', /^Arepa/]],
-    ogImage: '/assets/arepa-llanera.jpg',
+    ogImage: '/assets/arepa-llanera-v2.jpg',
     en: {
       title: 'Venezuelan Arepas in Daytona Beach | Venemex',
       description: 'Venezuelan arepas in Daytona Beach: Reina Pepiada, Pabellón, Llanera, carne mechada and cheese, from $9.99. Breakfast and lunch at Venemex.',
@@ -101,7 +101,7 @@ module.exports = {
   desserts: {
     paths: { en: '/desserts-daytona-beach/', es: '/es/postres-daytona-beach/' },
     cards: [['sec-postres']],
-    ogImage: '/assets/triple-chocolate-cake.jpg',
+    ogImage: '/assets/triple-chocolate-cake-v2.jpg',
     en: {
       title: 'Desserts & Pastries in Daytona Beach | Venemex Bakery',
       description: 'Flan, chocoflán, tres leches, cheesecakes, red velvet and triple chocolate cake, golfeados and pan dulce at Venemex Bakery & Café in Daytona Beach.',

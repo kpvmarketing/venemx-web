@@ -216,7 +216,7 @@ function restaurantSchema(lang) {
     name: 'Venemex Bakery & Café',
     description: T[lang].restaurantDescription,
     url: SITE + HOME[lang],
-    image: ['venemex-combo-for-2.jpg', 'triple-chocolate-cake.jpg', 'arepa-pabellon.jpg', 'pan-dulce.jpg', 'cheesecake-de-arandanos.jpg'].map((f) => `${SITE}/assets/${f}`),
+    image: ['venemex-combo-for-2-v2.jpg', 'triple-chocolate-cake-v2.jpg', 'arepa-pabellon.jpg', 'pan-dulce-v2.jpg', 'cheesecake-de-arandanos-v2.jpg'].map((f) => `${SITE}/assets/${f}`),
     logo: `${SITE}/assets/logovenemex2.png`,
     telephone: '+1-386-265-0055',
     priceRange: '$$',
@@ -242,7 +242,7 @@ function head({ lang, urls, title, description, ogImage, ogType = 'restaurant', 
   const meta = HOME_META[lang];
   const img = SITE + ogImage;
   const ld = schemas.map((s) => `<script type="application/ld+json">${JSON.stringify(s).replace(/</g, '\\u003c')}</script>`).join('\n');
-  const hero = preloadHero ? `\n<link rel="preload" as="image" href="/assets/hero-venemex-1280.webp" imagesrcset="/assets/hero-venemex-640.webp 640w, /assets/hero-venemex-960.webp 960w, /assets/hero-venemex-1280.webp 1280w, /assets/hero-venemex-1920.webp 1920w" imagesizes="(max-aspect-ratio: 3/2) 66vh, 100vw" fetchpriority="high">` : '';
+  const hero = preloadHero ? `\n<link rel="preload" as="image" href="/assets/hero-venemex-1280-v2.webp" imagesrcset="/assets/hero-venemex-640-v2.webp 640w, /assets/hero-venemex-960-v2.webp 960w, /assets/hero-venemex-1280-v2.webp 1280w, /assets/hero-venemex-1920-v2.webp 1920w" imagesizes="(max-aspect-ratio: 3/2) 66vh, 100vw" fetchpriority="high">` : '';
   return `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escHtml(title)}</title>
@@ -314,7 +314,7 @@ for (const lang of ['en', 'es']) {
   };
   const meta = HOME_META[lang];
   const headHtml = head({
-    lang, urls, title: meta.title, description: meta.description, ogImage: '/assets/venemex-combo-for-2.jpg',
+    lang, urls, title: meta.title, description: meta.description, ogImage: '/assets/venemex-combo-for-2-v2.jpg',
     schemas: [restaurantSchema(lang), menuSchema, faqSchema(faqs(body))], preloadHero: true
   });
   write(urls[lang], page(lang, headHtml, body));
